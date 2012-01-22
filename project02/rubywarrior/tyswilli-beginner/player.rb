@@ -1,5 +1,8 @@
 ﻿class Player
   def play_turn(warrior)
+	if warrior.feel.wall?
+		warrior.pivot!
+	else
 	if warrior.feel.captive?
 		warrior.rescue! :backward
 	else
@@ -20,6 +23,7 @@
 				warrior.walk!
 			end
 		end
+	end
 	end
 			@health = warrior.health
 	end
