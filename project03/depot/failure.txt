@@ -1,0 +1,16 @@
+Loaded suite c:/Ruby192/lib/ruby/gems/1.9.1/gems/rake-0.9.2.2/lib/rake/rake_test_loader
+Started
+..FF.
+Finished in 0.164010 seconds.
+
+  1) Failure:
+test_product_is_not_valid_without_a_unique_title(ProductTest) [c:/Users/Foopace/Documents/cs446/src/project03/depot/test/unit/product_test.rb:57]:
+Failed assertion, no message given.
+
+  2) Failure:
+test_product_is_not_valid_without_a_unique_title_-_i18n(ProductTest) [c:/Users/Foopace/Documents/cs446/src/project03/depot/test/unit/product_test.rb:67]:
+Failed assertion, no message given.
+
+5 tests, 21 assertions, 2 failures, 0 errors, 0 skips
+
+Test run options: --seed 21858
