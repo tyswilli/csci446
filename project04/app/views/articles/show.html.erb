@@ -1,21 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div id="header">
+<h1>Articl.es</h1>
+<h4>... what's "Articl" in Spanish anyway?</h4>
+</div>
 
-<p>
-  <b>Title:</b>
+<div id="redirects">
+<%= link_to image_tag("arrow_left.png") + 'View all Articles' , articles_path, {:title => "Back to all the Articles"} %>
+<%= link_to image_tag("script_edit.png") + 'Edit' , edit_article_path(@article), {:title => "Edit this Article"} %>
+<%= link_to image_tag("cross.png") + 'Delete', @article, confirm: 'Are you sure you want to delete this article?', method: :delete, title: "Delete this Article" %> 
+<%= mail_to "Someone@something.com", image_tag("email_go.png") + 'Email Article',   { :body => simple_format(@article.body),:title =>  "Email this Article"} %>
+</div>
+
+
+<h3>
   <%= @article.title %>
-</p>
+</h3>
+
 
 <p>
-  <b>Author:</b>
-  <%= @article.author %>
+  by
+  <%= @article.author %>.
+  <%= @article.edits %> edits since <%= @article.created_at.strftime("%A, %b. %d %Y") %>.
 </p>
+<br />
 
-<p>
-  <b>Body:</b>
-  <%= @article.body %>
-</p>
-
-
-
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+<p><%= simple_format(@article.body) %></p>

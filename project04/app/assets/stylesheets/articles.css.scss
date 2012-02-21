@@ -6,7 +6,24 @@ h1
   font-size:3.5em;
   font-family:Arial;
 }
-
+p
+{
+width: 900px;
+}
+h3
+{
+  font-size:2em;
+  padding-bottom:10px;
+  margin-bottom:0;
+}
+div#redirects
+{
+  a
+  {
+    padding-left:10px;
+    padding-right:90px;
+  }
+}
 div#header
 {
   margin-left:auto;
@@ -19,8 +36,8 @@ h2
 }
 div#new_article_link
 {
- padding-left: 500px;
- padding-top: 12px;
+ margin-left: 500px;
+ padding-top: 18px;
  width:auto;
 }
 div#table
@@ -86,4 +103,31 @@ div#table
     padding:2 px;
     margin:0;
   }
+}
+.field
+{
+ label
+ {
+  display:block;
+  width:75px;
+  text-align:right;
+  float:left;
+  padding-right:10px;
+ }
+ input
+ {
+  width:200px;
+ }
+ text-area
+ { 
+  width:400px;
+  overflow:auto;
+  padding-left:0;
+ 
+ }
+
+}
+.actions
+{
+  padding-left:85px;
 }
