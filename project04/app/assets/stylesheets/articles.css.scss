@@ -1,0 +1,82 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h1 
+{
+  font-size:3.5em;
+  font-family:Arial;
+}
+
+div#header
+{
+  margin-left:auto;
+  margin-right:auto;
+  width:60%;
+}
+div#new_article_link
+{
+ float:left;
+ width:auto;
+}
+div#table
+{
+  margin:0;
+  height:250px;
+  width:900px;
+  overflow:hidden;
+  padding:0;
+  .scrollable
+  {
+    height:220px;
+    overflow:auto;
+  }
+    
+  
+  table
+  {
+    border:0; 
+    cellpadding:0; 
+    cellspacing:0; 
+    width:100%;
+    border-collapse:collapse;
+  }
+  .title
+  {
+    width:12em;
+  }
+   .author
+  {
+    width:12em;
+  }
+   .body
+  {
+    width:24em;
+  }
+  .date
+  {
+    width:13em;
+  }
+  th
+  {
+    background-color: #ccc;
+    
+  }
+  tr:nth-child(even)
+  {
+    background-color: #ddd;
+  }
+  .link
+  {
+     background-color: #fff;
+     border: none;
+     width:1em;
+     padding: 2px;
+  }
+  th, td
+  {
+    border-collapse:collapse;
+    border: 1px solid black;
+    padding:0;
+    margin:0;
+  }
+}
