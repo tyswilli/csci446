@@ -13,21 +13,27 @@ div#header
   margin-right:auto;
   width:60%;
 }
+h2
+{
+  float:left;
+}
 div#new_article_link
 {
- float:left;
+ padding-left: 500px;
+ padding-top: 12px;
  width:auto;
 }
 div#table
 {
   margin:0;
-  height:250px;
+  height:260px;
   width:900px;
   overflow:hidden;
-  padding:0;
+  padding:0px;
+  padding-top:30px;
   .scrollable
   {
-    height:220px;
+    height:230px;
     overflow:auto;
   }
     
@@ -72,11 +78,12 @@ div#table
      width:1em;
      padding: 2px;
   }
+  
   th, td
   {
     border-collapse:collapse;
     border: 1px solid black;
-    padding:0;
+    padding:2 px;
     margin:0;
   }
 }
