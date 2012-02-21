@@ -1,5 +1,11 @@
 class Article < ActiveRecord::Base
 
   validates :title, :author, :body, presence: true
-  validates :author, :exclusion => { :in => "/pat/i", :message => "%{value} contains Pat. We don't accept this name." }
+  validate :no_pat
+  def no_pat
+    if (author.match(/(pat)/i))
+      errors.add(:author, " name can't include Pat")
+    end
+  end
+ 
 end
