@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
   # GET /articles/new.json
   def new
     @article = Article.new
-
+    @back_to = request.env['HTTP_REFERER']
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @article }
@@ -35,6 +35,7 @@ class ArticlesController < ApplicationController
   # GET /articles/1/edit
   def edit
     @article = Article.find(params[:id])
+    @back_to = request.env['HTTP_REFERER']
   end
 
   # POST /articles
@@ -58,14 +59,15 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     @article.edits=@article.edits+1;
+    @back_to = params[:back_to]
     respond_to do |format|
       if @article.update_attributes(params[:article])
-        format.html { redirect_to @article, notice: 'Article was successfully updated.' }
+        format.html { redirect_to @back_to, notice: 'Article was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
         format.json { render json: @article.errors, status: :unprocessable_entity }
-      end
+     end
     end
   end
 

@@ -1,7 +1,5 @@
-<div id="header">
-<h1>Articl.es</h1>
-<h4>... with a name .com hipsters love!</h4>
-</div>
+<%= render 'header' %>
+<%= yield :index %>
 <h2> All the World's Articles</h2>
 <div id="new_article_link">
 <%= link_to image_tag("add.png") + 'Add new Article' , new_article_path, {:title => "Create a new Article"} %>

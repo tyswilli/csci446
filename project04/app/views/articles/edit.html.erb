@@ -1,7 +1,5 @@
-<div id="header">
-<h1>Articl.es</h1>
-<h4>... my cousin works for Bit.ly</h4>
-</div>
+<%= render 'header' %>
+<%= yield :edit %>
 
 <div id="redirects">
 <%= link_to image_tag("arrow_left.png") + 'Back' , :back, {:title => "Back to previous page"} %>
@@ -10,6 +8,10 @@
 <h3>
   Editing "<%= @article.title %>"
 </h3>
+
+<br />
+<br />
 <%= render 'form' %>
+<%= yield :edit_submit %>
 
 

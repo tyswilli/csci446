@@ -1,7 +1,5 @@
-<div id="header">
-<h1>Articl.es</h1>
-<h4>... what's "Articl" in Spanish anyway?</h4>
-</div>
+<%= render 'header' %>
+<%= yield :show %>
 
 <div id="redirects">
 <%= link_to image_tag("arrow_left.png") + 'View all Articles' , articles_path, {:title => "Back to all the Articles"} %>
@@ -14,6 +12,7 @@
 <h3>
   <%= @article.title %>
 </h3>
+
 
 
 <p>
