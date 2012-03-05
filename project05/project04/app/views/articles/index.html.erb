@@ -1,0 +1,40 @@
+<%= render 'header' %>
+<%= yield :index %>
+<h2> All the World's Articles</h2>
+<div id="new_article_link">
+<%= link_to image_tag("add.png") + 'Add new Article' , new_article_path, {:title => "Create a new Article"} %>
+</div>
+<br />
+<div id="table">
+<table id="header">
+  
+  <tr>
+    <th class="title">Title</th>
+    <th class="author">Author</th>
+    <th class="body">Body</th>
+    <th class="date">Creation Date</th>
+    <th class="link"></th>
+    <th class="link"></th>
+    <th class="link"></th>
+    <th class="link"></th>
+  </tr>
+</table>
+<div class="scrollable">
+<table>
+<% @articles.each do |article| %>
+  <tr>
+    <td class="title"><%= article.title %></td>
+    <td class="author"><%= article.author %></td>
+    <td class="body"><%= article.body.split(' ').slice(0,5).join(' ') %>...</td>
+    <td class="date"><%= article.created_at.strftime("%A, %b. %d %Y") %></td>
+    <td class="link"><%= link_to(image_tag("zoom.png", :size => "10x15"), article, {:title => "View this Article"})  %></td>
+    <td class="link"><%= link_to(image_tag("script_edit.png", :size => "10x15"), edit_article_path(article), {:title => "Edit this Article"})%></td>
+    <td class="link"><%= link_to image_tag("cross.png", :size => "10x15"), article, confirm: 'Are you sure you want to delete this article?', method: :delete, title: "Delete this Article" %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+</div>
+<br />
+<%= @articles.length %>
+<%= "article".pluralize %>.
