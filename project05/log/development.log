@@ -41535,3 +41535,354 @@ Served asset /application.js - 304 Not Modified (1ms)
 
 Started GET "/assets/arrow_left.png" for 127.0.0.1 at 2012-03-05 23:54:16 -0700
 Served asset /arrow_left.png - 304 Not Modified (1ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-05 23:55:44 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered authors/_header.html.haml (7.0ms)
+  Rendered authors/show.html.haml within layouts/application (77.0ms)
+Completed 200 OK in 345ms (Views: 336.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-05 23:55:50 -0700
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-03-05 23:55:50 -0700
+Served asset /articles.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2012-03-05 23:55:50 -0700
+Served asset /authors.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-03-05 23:55:50 -0700
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-05 23:55:50 -0700
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-05 23:55:50 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-03-05 23:55:50 -0700
+Served asset /articles.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2012-03-05 23:55:50 -0700
+Served asset /authors.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-05 23:55:50 -0700
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/arrow_left.png" for 127.0.0.1 at 2012-03-05 23:55:50 -0700
+Served asset /arrow_left.png - 200 OK (2ms)
+
+
+Started GET "/assets/script_edit.png" for 127.0.0.1 at 2012-03-05 23:55:50 -0700
+Served asset /script_edit.png - 200 OK (2ms)
+
+
+Started GET "/assets/cross.png" for 127.0.0.1 at 2012-03-05 23:55:50 -0700
+Served asset /cross.png - 200 OK (2ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:01:03 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered authors/show.html.haml within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 20ms
+
+ActionView::Template::Error (The line was indented 2 levels deeper than the previous line.):
+    12:   = image_tag @author.photo.url
+    13:   
+    14: - @articlesbyauthor.each do |author|
+    15:     %tr
+    16:       %td= article.title
+    17:       %td= article.body.split(' ').slice(0,5).join(' ')
+    18:       %td.date= article.created_at.strftime("%A, %b. %d %Y")
+  app/views/authors/show.html.haml:15
+  app/controllers/authors_controller.rb:19:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:01:37 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered authors/_header.html.haml (2.0ms)
+  Rendered authors/show.html.haml within layouts/application (12.0ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:   = image_tag @author.photo.url
+    13:   
+    14: #articletable
+    15:   - @articlesbyauthor.each do |author|
+    16:     %tr
+    17:       %td= article.title
+    18:       %td= article.body.split(' ').slice(0,5).join(' ')
+  app/views/authors/show.html.haml:15:in `_app_views_authors_show_html_haml___621855195_45320448'
+  app/controllers/authors_controller.rb:19:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:01:56 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered authors/_header.html.haml (2.0ms)
+  Rendered authors/show.html.haml within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 25ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:   = image_tag @author.photo.url
+    13:   
+    14: #articletable
+    15:   - @articlesbyauthor.each do |author|
+    16:     %tr
+    17:       %td= article.title
+    18:       %td= article.body.split(' ').slice(0,5).join(' ')
+  app/views/authors/show.html.haml:15:in `_app_views_authors_show_html_haml___621855195_45320448'
+  app/controllers/authors_controller.rb:19:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:03:25 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered authors/_header.html.haml (2.0ms)
+  Rendered authors/show.html.haml within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12:   = image_tag @author.photo.url
+    13:   
+    14: #articletable
+    15:   - @articlesbyauthor.each do |article|
+    16:     %tr
+    17:       %td= article.title
+    18:       %td= article.body.split(' ').slice(0,5).join(' ')
+  app/views/authors/show.html.haml:15:in `_app_views_authors_show_html_haml___621855195_47163216'
+  app/controllers/authors_controller.rb:19:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (6.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:03:52 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `find_all_by_author' for Articles:Module):
+  app/controllers/authors_controller.rb:18:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:08:01 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 10ms
+
+NoMethodError (undefined method `find_all_by_author' for Articles:Module):
+  app/controllers/authors_controller.rb:18:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:08:09 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `find_all_by_authors' for Articles:Module):
+  app/controllers/authors_controller.rb:18:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:09:26 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `find_all_by_author' for Articles:Module):
+  app/controllers/authors_controller.rb:18:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:09:27 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `find_all_by_author' for Articles:Module):
+  app/controllers/authors_controller.rb:18:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:11:04 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (1.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 7ms
+
+NoMethodError (undefined method `find_all_by_author' for Articles:Module):
+  app/controllers/authors_controller.rb:18:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:11:07 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 10ms
+
+NoMethodError (undefined method `find_all_by_author' for Articles:Module):
+  app/controllers/authors_controller.rb:18:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:11:08 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `find_all_by_author' for Articles:Module):
+  app/controllers/authors_controller.rb:18:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:11:26 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `find_all_by_author' for Articles:Module):
+  app/controllers/authors_controller.rb:18:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:17:03 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `find_all_by_author' for Articles:Module):
+  app/controllers/authors_controller.rb:18:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:18:21 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (1.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 121ms
+
+NameError (undefined local variable or method `name' for #<AuthorsController:0x5c002b0>):
+  app/controllers/authors_controller.rb:18:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:18:32 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 9ms
+
+NoMethodError (undefined method `where' for Articles:Module):
+  app/controllers/authors_controller.rb:18:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-06 00:19:45 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `find' for Articles:Module):
+  app/controllers/authors_controller.rb:18:in `show'
+
+
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.2.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.0ms)

@@ -6,6 +6,5 @@ class Article < ActiveRecord::Base
     if (author.match(/(pat)/i))
       errors.add(:author, " name can't include Pat")
     end
-  end
- 
+  end 
 end

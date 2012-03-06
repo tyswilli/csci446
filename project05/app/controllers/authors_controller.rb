@@ -15,7 +15,7 @@ class AuthorsController < ApplicationController
   # GET /authors/1.json
   def show
     @author = Author.find(params[:id])
-
+    #@articlesbyauthor = Articles.find(:all)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @author }
@@ -80,8 +80,5 @@ class AuthorsController < ApplicationController
       format.html { redirect_to authors_url }
       format.json { head :no_content }
     end
-  end
-  def getarticles
-    @articlesbyauthor = Task.find_all_by_name(:name)
   end
 end
