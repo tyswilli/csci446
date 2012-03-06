@@ -41311,3 +41311,227 @@ Served asset /cross.png - 304 Not Modified (1ms)
 
 Started GET "/assets/script_edit.png" for 127.0.0.1 at 2012-03-05 23:36:42 -0700
 Served asset /script_edit.png - 304 Not Modified (0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-05 23:48:47 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered authors/_header.html.haml (3.0ms)
+  Rendered authors/show.html.haml within layouts/application (11.0ms)
+WARNING on line 34 of c:/Users/Foopace/Documents/cs446/src/project05/app/assets/stylesheets/authors.css.sass:
+This selector doesn't have any properties and will not be rendered.
+WARNING on line 109 of c:/Users/Foopace/Documents/cs446/src/project05/app/assets/stylesheets/authors.css.sass:
+This selector doesn't have any properties and will not be rendered.
+Compiled authors.css  (125ms)  (pid 7092)
+Compiled application.css  (2ms)  (pid 7092)
+Completed 200 OK in 200ms (Views: 199.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-05 23:48:47 -0700
+Served asset /application.css - 304 Not Modified (18ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2012-03-05 23:48:47 -0700
+Served asset /authors.css - 200 OK (3ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-03-05 23:48:47 -0700
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-03-05 23:48:47 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-05 23:48:47 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-05 23:48:47 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2012-03-05 23:48:47 -0700
+Served asset /authors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-05 23:48:47 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-03-05 23:48:47 -0700
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/arrow_left.png" for 127.0.0.1 at 2012-03-05 23:48:48 -0700
+Served asset /arrow_left.png - 304 Not Modified (0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-05 23:50:35 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered authors/_header.html.haml (8.0ms)
+  Rendered authors/show.html.haml within layouts/application (78.0ms)
+Completed 200 OK in 373ms (Views: 363.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-05 23:50:41 -0700
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-03-05 23:50:41 -0700
+Served asset /articles.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2012-03-05 23:50:41 -0700
+Served asset /authors.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-03-05 23:50:41 -0700
+Served asset /scaffolds.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-05 23:50:41 -0700
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-05 23:50:41 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-03-05 23:50:41 -0700
+Served asset /articles.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2012-03-05 23:50:41 -0700
+Served asset /authors.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-05 23:50:41 -0700
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/arrow_left.png" for 127.0.0.1 at 2012-03-05 23:50:41 -0700
+Served asset /arrow_left.png - 200 OK (3ms)
+
+
+Started GET "/assets/script_edit.png" for 127.0.0.1 at 2012-03-05 23:50:41 -0700
+Served asset /script_edit.png - 200 OK (3ms)
+
+
+Started GET "/assets/cross.png" for 127.0.0.1 at 2012-03-05 23:50:41 -0700
+Served asset /cross.png - 200 OK (2ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-05 23:51:59 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.0ms)[0m  SELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered authors/_header.html.haml (2.0ms)
+  Rendered authors/show.html.haml within layouts/application (6.0ms)
+WARNING on line 34 of c:/Users/Foopace/Documents/cs446/src/project05/app/assets/stylesheets/authors.css.sass:
+This selector doesn't have any properties and will not be rendered.
+WARNING on line 109 of c:/Users/Foopace/Documents/cs446/src/project05/app/assets/stylesheets/authors.css.sass:
+This selector doesn't have any properties and will not be rendered.
+Compiled authors.css  (112ms)  (pid 8284)
+Compiled application.css  (2ms)  (pid 8284)
+Completed 200 OK in 180ms (Views: 179.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-03-05 23:51:59 -0700
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-03-05 23:51:59 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-05 23:51:59 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-05 23:51:59 -0700
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2012-03-05 23:51:59 -0700
+Served asset /authors.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-05 23:51:59 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-03-05 23:51:59 -0700
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2012-03-05 23:51:59 -0700
+Served asset /authors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-05 23:51:59 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/arrow_left.png" for 127.0.0.1 at 2012-03-05 23:51:59 -0700
+Served asset /arrow_left.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/cross.png" for 127.0.0.1 at 2012-03-05 23:51:59 -0700
+Served asset /cross.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/script_edit.png" for 127.0.0.1 at 2012-03-05 23:51:59 -0700
+Served asset /script_edit.png - 304 Not Modified (0ms)
+
+
+Started GET "/authors/1" for 127.0.0.1 at 2012-03-05 23:54:16 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.0ms)[0m  [1mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered authors/_header.html.haml (2.0ms)
+  Rendered authors/show.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 31ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-03-05 23:54:16 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.css?body=1" for 127.0.0.1 at 2012-03-05 23:54:16 -0700
+Served asset /authors.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-03-05 23:54:16 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-03-05 23:54:16 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/articles.css?body=1" for 127.0.0.1 at 2012-03-05 23:54:16 -0700
+Served asset /articles.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-03-05 23:54:16 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/articles.js?body=1" for 127.0.0.1 at 2012-03-05 23:54:16 -0700
+Served asset /articles.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/authors.js?body=1" for 127.0.0.1 at 2012-03-05 23:54:16 -0700
+Served asset /authors.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-03-05 23:54:16 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/arrow_left.png" for 127.0.0.1 at 2012-03-05 23:54:16 -0700
+Served asset /arrow_left.png - 304 Not Modified (1ms)

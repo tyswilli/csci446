@@ -81,4 +81,7 @@ class AuthorsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  def getarticles
+    @articlesbyauthor = Task.find_all_by_name(:name)
+  end
 end
