@@ -1,0 +1,7 @@
+= render 'header'
+= yield :new
+#redirects
+  = link_to image_tag("arrow_left.png") + 'Back' , :back, {:title => "Back to previous page"}
+%h3 Creating a New Article
+= render 'form'
+= yield :new_submit

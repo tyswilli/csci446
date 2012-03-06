@@ -1,0 +1,10 @@
+= render 'header'
+= yield :edit
+#redirects
+  = link_to image_tag("arrow_left.png") + 'Back' , :back, {:title => "Back to previous page"}
+%h3
+  Editing "#{@article.title}"
+%br/
+%br/
+= render 'form'
+= yield :edit_submit
