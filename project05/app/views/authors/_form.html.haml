@@ -1,0 +1,38 @@
+- content_for :new_submit do
+  = form_for(@author, :html => { :multipart => true }) do |f|
+    - if @author.errors.any?
+      #error_explanation
+        %h5
+          = pluralize(@author.errors.count, "error")
+          prohibited this author from being saved:
+        %ul
+          - @author.errors.full_messages.each do |msg|
+            %li= msg
+    = hidden_field_tag "back_to", @back_to
+    .field
+      = f.label :name
+      = f.text_field :name
+    .field
+      = f.label :photo
+      = f.file_field :photo
+    .actions
+      = f.submit 'Create!'
+- content_for :edit_submit do
+  = form_for(@author, :html => { :multipart => true }) do |f|
+    - if @author.errors.any?
+      #error_explanation
+        %h5
+          = pluralize(@author.errors.count, "error")
+          prohibited this author from being saved:
+        %ul
+          - @author.errors.full_messages.each do |msg|
+            %li= msg
+    = hidden_field_tag "back_to", @back_to
+    .field
+      = f.label :name
+      = f.text_field :name
+    .field
+      = f.label :photo
+      = f.file_field :photo
+    .actions
+      = f.submit 'Save Changes'

@@ -1,0 +1,11 @@
+= render 'header'
+= yield :show
+
+#redirects
+  = link_to image_tag("arrow_left.png") + 'View all authors' , authors_path, {:title => "Back to all the authors"}
+  = link_to image_tag("script_edit.png") + 'Edit' , edit_author_path(@author), {:title => "Edit this author"}
+  = link_to image_tag("cross.png") + 'Delete', @author, confirm: 'Are you sure you want to delete this author?', method: :delete, title: "Delete this author"
+%h3
+  = @author.name
+
+= image_tag @author.photo.url

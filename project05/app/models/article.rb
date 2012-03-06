@@ -1,5 +1,5 @@
 class Article < ActiveRecord::Base
-
+  belongs_to :authors
   validates :title, :author, :body, presence: true
   validate :no_pat
   def no_pat

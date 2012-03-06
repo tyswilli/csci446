@@ -1,0 +1,22 @@
+= render 'header'
+= yield :index
+%h2 All the Worlds Authors
+#new_article_link
+  = link_to image_tag("add.png") + 'Add new Author' , new_author_path, {:title => "Add a new Author"}
+%br/
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @authors.each do |author|
+    %tr
+      %td= author.name
+      %td= link_to 'Show', author
+      %td= link_to 'Edit', edit_author_path(author)
+      %td= link_to 'Destroy', author, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
