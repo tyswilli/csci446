@@ -1,4 +1,6 @@
 Gamez::Application.routes.draw do
+  get "users_sessions/new"
+
   resources :users
 
   # The priority is based upon order of creation:
