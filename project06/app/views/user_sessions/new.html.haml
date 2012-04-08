@@ -1,0 +1,17 @@
+%title "Log in"
+%h1 Log in
+= form_for @user_session do |form|
+  - if @user_session.errors.any?
+    %h2
+      = pluralize(@user_session.errors.count, "error")
+    %ul 
+      - @user.errors.full_messages.each do |msg|
+        %li= msg
+  %p
+    = form.label :username, "Username"
+    = form.text_field :username
+  %p
+    = form.label :password, "Password"
+    = form.password_field :password
+  %p
+    = form.submit "Login"
