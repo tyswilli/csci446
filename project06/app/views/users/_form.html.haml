@@ -22,4 +22,7 @@
     = f.label :password_confirmation
     %br/
     = f.password_field :password_confirmation
+  - @roles = @user.roles.find(:all)
+  = select_tag :role_select,options_from_collection_for_select(@roles, 'id', 'title') 
+  = recaptcha_tags
   = f.submit "Save User"

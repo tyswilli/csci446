@@ -41,7 +41,7 @@ class GamesController < ApplicationController
   # POST /games
   # POST /games.json
   def create
-    #@user =  UserSession.find.user
+    @user =  UserSession.find.user
     @game = @user.game.new(params[:game])
   
     respond_to do |format|

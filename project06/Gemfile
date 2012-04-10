@@ -27,6 +27,7 @@ gem 'will_paginate'
 gem 'paperclip'
 gem 'jquery-rails'
 gem 'declarative_authorization'
+gem "recaptcha", :require => "recaptcha/rails"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

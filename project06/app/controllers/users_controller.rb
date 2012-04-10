@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def create
     
-    if @user.save
+    if verify_recaptcha() && @user.save
       redirect_to root_url, :notice => "Successfully created user."
     else
       render :action => 'new'
