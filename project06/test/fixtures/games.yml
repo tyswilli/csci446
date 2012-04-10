@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  rating: MyString
+  date_created: 2012-04-09 17:29:09
+  creator: MyString
+
+two:
+  title: MyString
+  rating: MyString
+  date_created: 2012-04-09 17:29:09
+  creator: MyString

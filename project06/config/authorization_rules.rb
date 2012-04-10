@@ -6,9 +6,11 @@ authorization do
   role :user do
       has_permission_on :games, :to => [:index, :show, :new, :create, :edit, :update]
       has_permission_on :games, :to => [:index, :show, :edit, :update]
-      has_permission_on [:user_sessions], :to => [:new, :create,:destroy]
+      has_permission_on :user_sessions, :to => [:new, :create,:destroy]
+    end
   role :guest do
     has_permission_on :games, :to => [:index, :show]
-    has_permission_on [:user_sessions], :to => [:new, :create]
+    has_permission_on :user_sessions, :to => [:new, :create]
+    has_permission_on :users,  :to =>  [:new, :create,:destroy]
   end
 end

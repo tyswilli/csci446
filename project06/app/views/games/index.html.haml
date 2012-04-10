@@ -1,0 +1,28 @@
+%h1 Listing games
+
+%table
+  %tr
+    %th Title
+    %th Rating
+    %th Date created
+    %th Creator
+    %th
+    %th
+    %th
+
+  - @games.each do |game|
+    %tr
+      %td= game.title
+      %td= game.rating
+      %td= game.created_at.strftime("%A, %b. %d %Y")
+      %td= game.creator
+      %td= link_to 'Show', game
+      %td= link_to 'Edit', edit_game_path(game)
+      %td= link_to 'Destroy', game, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+- if permitted_to? :create, Game.new
+  %p
+    = link_to "New Game", new_game_path
+

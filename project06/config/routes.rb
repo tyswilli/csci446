@@ -1,10 +1,14 @@
 Gamez::Application.routes.draw do
+  resources :roles
+
+  resources :games
+
   get "users_sessions/new"
   resources :user_sessions
   resources :users
   match '/login', :controller => 'user_sessions', :action => 'new', :as => 'login'
   match '/logout', :controller => 'user_sessions', :action => 'destroy', :as => 'logout'
- 
+  root :to => 'games#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
