@@ -20,6 +20,10 @@ h2 span.highScore {
   font-size: 2em;
   margin-right: -50px;
 }
+h2 span.userFeedback {
+
+border-bottom: 1px solid #000;
+}
 
 h2#score {
   color: #FFC125;
@@ -31,12 +35,12 @@ input#guess {
 }
 
 input#btnGuess {
-  font-size: 20em;
+  font-size: 8em;
 }
 
 form#guessTheNumber {
   width: 50%;
   margin: auto;
-  border-bottom: 1px solid #000;
+  
   padding: 20px;
 }
